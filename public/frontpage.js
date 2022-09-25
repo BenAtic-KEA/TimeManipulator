@@ -18,9 +18,15 @@ function getWeekNumber(){
 }
 
 
-weekday.addEventListener("load", loadWeeknr())
-
+weekday.addEventListener("load", loadDay())
+actualDay.addEventListener("load", loadWeeknr())
 function loadWeeknr(){
     weekday.innerHTML = `<h1>
     ${getWeekNumber()}</h1>`;
+}
+
+
+
+function loadDay(){
+    actualDay.innerHTML = `${dayMonth} - ${day} - ${month} - ${year}`
 }
