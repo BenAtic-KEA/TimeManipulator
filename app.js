@@ -8,4 +8,5 @@ app.get("/",(req,res) =>{
     res.sendFile(path.resolve("./public/index.html"))
 } )
 
-app.listen(8080,() => console.log("server is running on port",8080));
+app.listen(process.env.PORT || 3000, 
+	() => console.log("Server is running..."));
